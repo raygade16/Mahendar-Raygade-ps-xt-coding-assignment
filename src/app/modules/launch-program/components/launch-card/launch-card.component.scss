@@ -1,0 +1,36 @@
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+
+  &__image {
+    background-color: #f2f2f1;
+    padding: 5px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      max-height: 225px;
+      object-fit: contain;
+    }
+  }
+
+  &__body {
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #4d5498;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 14px;
+      text-transform: capitalize;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

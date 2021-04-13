@@ -1,0 +1,13 @@
+{
+    "[typescript]": {
+      "editor.formatOnSave": true
+    },
+    "workbench.editor.enablePreview": false,
+    "html.format.wrapAttributes": "force",
+    "git.ignoreLimitWarning": true,
+    "editor.tabSize": 2,
+    "workbench.editor.showTabs": true,
+    "javascript.validate.enable": true,
+    "editor.fontSize": 13,
+    "explorer.compactFolders": false
+  }

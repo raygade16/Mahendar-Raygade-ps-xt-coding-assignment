@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card__image">
+    <img
+      [src]="launchProgram.links.mission_patch_small ? launchProgram.links.mission_patch_small : noImageUrl"
+      [alt]="launchProgram.mission_name"
+      loading="lazy">
+  </div>
+  <div class="card__body">
+    <h2 class="card__title">
+      {{ launchProgram.mission_name }} #{{launchProgram.flight_number}}
+    </h2>
+    <p>
+      <strong>Mission Ids:</strong>
+      <span *ngFor="let missionId of launchProgram.mission_id">
+        {{ missionId }}
+      </span>
+      <span *ngIf="!launchProgram.mission_id.length">N.A</span>
+    </p>
+    <p><strong>Launch Year:</strong>{{ launchProgram.launch_year }}</p>
+    <p><strong>successful launch:</strong>{{ launchProgram.launch_success }}</p>
+    <p><strong>successful landing:</strong>{{ launchProgram.land_success }}</p>
+  </div>
+</div>

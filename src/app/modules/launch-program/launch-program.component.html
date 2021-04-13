@@ -1,0 +1,39 @@
+<header>
+  <h1>SpaceX Launch Program</h1>
+</header>
+<section class="wrapper">
+  <div class="sidebar">
+    <app-filters></app-filters>
+  </div>
+  <div class="main">
+    <div class="main__content">
+
+      <!-- LOADING CARD SCREEN -->
+      <ng-template [ngIf]="loading">
+        <div class="launch--card"
+          *ngFor="let loader of loaderCount">
+          <app-card-loader></app-card-loader>
+        </div>
+      </ng-template>
+
+      <!-- SPACE PROGRAM LISTING -->
+      <ng-template [ngIf]="!loading && launches.length">
+        <div class="launch--card"
+          *ngFor="let launch of launches">
+          <app-launch-card [launchProgram]="launch">
+          </app-launch-card>
+        </div>
+      </ng-template>
+
+      <!-- NO SPACE ERROR MESSAGE -->
+      <ng-template [ngIf]="!loading && !launches.length">
+        <div class="no-item-placeholder">
+          <p>Sorry :( <br> No Launches found please update filter to find out other launches ...</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
+<footer>
+  <p><strong>Developed By: </strong>Mahendra Raygade</p>
+</footer>
